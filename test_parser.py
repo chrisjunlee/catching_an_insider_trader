@@ -4,7 +4,6 @@ class TestData:
     def __init__(self, xml_file):
         self._tree = ET.parse(xml_file)
         self._root = self._tree.getroot()
-        self.testcases = []
         self.testcases = [TestCase(node) for node in self._root]
 
     def __str__(self):

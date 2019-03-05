@@ -1,0 +1,73 @@
+<data>
+    <testcase name="test_00" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Billy | SELL | 1000
+        </input>
+        <threshold>100</threshold>
+        <expected>Billy</expected>
+    </testcase>
+    <testcase name="test_01" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Billy | SELL | 1000
+        </input>
+        <threshold>800</threshold>
+        <expected>Billy</expected>
+    </testcase>
+    <testcase name="test_02" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Billy | SELL | 1000
+        </input>
+        <threshold>801</threshold>
+        <expected></expected>
+    </testcase>
+    <testcase name="test_03" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Alice | BUY | 600
+            0 | Billy | SELL | 1000
+        </input>
+        <threshold>800</threshold>
+        <expected>Billy</expected>
+    </testcase>
+    <testcase name="test_04" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Alice | BUY | 600
+            2 | Billy | SELL | 1000
+        </input>
+        <threshold>800</threshold>
+        <expected>Billy</expected>
+    </testcase>
+    <testcase name="test_05" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Alice | BUY | 600
+            3 | Billy | SELL | 1000
+        </input>
+        <threshold>800</threshold>
+        <expected></expected>
+    </testcase>
+    <testcase name="test_06" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Alice | BUY | 100
+            1 | Billy | SELL | 1000
+            2 | Alice | BUY | 1000
+        </input>
+        <threshold>800</threshold>
+        <expected>Billy Alice</expected>
+    </testcase>
+    <testcase name="test_07" priority="0">
+        <input> 
+            0 | Billy | BUY | 200
+            0 | Alice | BUY | 100
+            1 | Billy | SELL | 800
+            2 | Alice | BUY | 1000
+        </input>
+        <threshold>800</threshold>
+        <expected>Alice</expected>
+    </testcase>
+</data>
